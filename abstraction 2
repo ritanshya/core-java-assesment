@@ -1,0 +1,44 @@
+// Step 1: Create interface
+interface Animal {
+    void makeSound();   // abstract method
+    void eat();         // abstract method
+}
+
+// Step 2 & 3: Implement the interface
+class Dog implements Animal {
+    public void makeSound() {
+        System.out.println("Dog barks");
+    }
+
+    public void eat() {
+        System.out.println("Dog eats food");
+    }
+}
+
+// Another class for better understanding
+class Cat implements Animal {
+    public void makeSound() {
+        System.out.println("Cat meows");
+    }
+
+    public void eat() {
+        System.out.println("Cat drinks milk");
+    }
+}
+
+// Step 4: Main class
+public class Main {
+    public static void main(String[] args) {
+        
+        Animal a1 = new Dog();  // interface reference
+        Animal a2 = new Cat();
+
+        a1.makeSound();
+        a1.eat();
+
+        System.out.println();
+
+        a2.makeSound();
+        a2.eat();
+    }
+}
